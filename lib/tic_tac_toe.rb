@@ -92,3 +92,4 @@ def full?
   @board.all?{|occupied| occupied != " "}
 end
 end
+end
