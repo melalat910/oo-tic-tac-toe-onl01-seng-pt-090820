@@ -2,7 +2,7 @@ class TicTacToe
   def initialize(board = nil)
     @board = board || Array.new(9, " ")
   end
-end 
+end
 
 
 WIN_COMBINATIONS = [
@@ -15,7 +15,7 @@ WIN_COMBINATIONS = [
     [0,4,8],
     [2,4,6]
   ]
-  
+
     def display_board
     puts " #{@board[0]} | #{@board[1]} | #{@board[2]} "
     puts "-----------"
@@ -23,13 +23,13 @@ WIN_COMBINATIONS = [
     puts "-----------"
     puts " #{@board[6]} | #{@board[7]} | #{@board[8]} "
   end
-  
+
   # input_index
-  
+
   def input_to_index(user_input)
     user_input.to_i - 1
   end
-  
+
   def move(position, char)
     @board[position] = char
   end
@@ -41,7 +41,7 @@ WIN_COMBINATIONS = [
   def valid_move?(index)
     index.between?(0,8) && !position_taken?(index)
   end
-  
+
 
 #turn_count
   def turn_count
@@ -52,7 +52,7 @@ WIN_COMBINATIONS = [
     end
   end
   return number_of_turns
-  
+
 #current_player
   def current_player
     if turn_count % 2 == 0
@@ -60,8 +60,8 @@ WIN_COMBINATIONS = [
     else
     "O"
   end
- 
-#turn 
+
+#turn
 def turn
     puts "Please enter 1-9:"
     input = gets.strip
